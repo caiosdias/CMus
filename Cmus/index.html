@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <title>CMus - REA</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/icon.png" rel="icon">
+  <link href="img/icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="#intro" class="scrollto">CMUS</a></h1>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">Introdução</a></li>
+          <li><a href="#features">Funcionamento</a></li>
+          <li><a href="#team">Autores</a></li>
+          <li><a href="#gallery">Interface</a></li>
+
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+
+    <div class="intro-text wow fadeInDown">
+      <h2>C* Music Player</h2>
+      <p>"A small, fast and powerful console music player for Unix-like operating systems."</p>
+      <a href="#about" class="btn-get-started scrollto">Conheça mais</a>
+    </div>
+	<div class="product-screens">
+		<div class="product-screen-1 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s" style="visibility: visible; animation-duration: 0.6s; animation-delay: 0.2s; animation-name: fadeInUp;">
+			<img src="img/cmusic.png" alt="">
+		</div>
+	</div>
+
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+    Introdução - CMUS
+    ============================-->
+    <section id="about" class="section-bg">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">Introdução</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">
+            Um player de áudio bonito para a linha de comando do Linux.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6 about-img wow fadeInLeft">
+            <img src="img/about-img.jpg" alt="">
+          </div>
+
+          <div class="col-lg-6 content wow fadeInRight">
+            <h2 style="text-align: justify;">Um player de áudio para quem tem hardware limitado e preza pelo bom uso dos recursos computacionais.
+</h2>
+
+            <ul>
+              <li><i class="ion-android-checkmark-circle"></i> Codificado inteiramente e C, para o maior desempenho.</li>
+              <li><i class="ion-android-checkmark-circle"></i> Player CLI(Command Line Interface), ou seja ele roda na terminal do Linux.</li>
+              <li><i class="ion-android-checkmark-circle"></i> Robusto e eficiênte, para rodar até nos micros mais antigos  </li>
+            </ul>
+
+            <p style="text-align: justify;">
+              A tarefa de decodificar arquivos MP3 e OGG é uma tarefa onerosa na questão de consumo de processamento, principalmente em hardwares antigos. O CMUS tem uma interface visualmente agradável e bem intuitiva após o esclarecimento do seu conceito. Contudo, o processo de aprendizagem do uso do player CMUS pode ser um pouco complicado para alguns usuários. 
+			</p>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Funcionamento
+    ============================-->
+    <section id="features">
+      <div class="container">
+          <div class="section-header wow fadeIn" data-wow-duration="1s">
+              <h3 class="section-title">Funcionamento</h3>
+              <span class="section-divider"></span>
+
+        </div>
+
+      </div>
+
+    </section><!-- #features -->
+
+    <!--==========================
+      Funcionamento
+    ============================-->
+    <section id="advanced-features">
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-right wow fadeInRight" src="img/produtorconsumidor.png" alt="">
+              <div class="wow fadeInLeft">
+                <h2>Produtor e Consumidor</h2>
+                <p class="wow fadeInLeft" data-wow-delay="0.4s" data-wow-duration="0.5s" style="text-align: justify;">
+					O problema Produtor e Consumidor consiste em um conjunto de processos que compartilham um mesmo buffer. Os processos chamados produtores põem informação no buffer. Os processos chamados consumidores retiram informação deste buffer. O CMUS faz uso dessa lógica para fazer o armazenamento dos arquivos de áudio a serem tocados como pode ser visto no arquivo player.c, logo no início já é feita a implementação das threads que serão responsáveis por executar os processos de alimentar e utilizar as informações no buffer. Esse buffer possui um tamanho fixo, definido por <code>CHUNK_SIZE</code> no arquivo buffer.c, para ter informação suficiente para tocar a música sem cortes e também ser ágil na coleta desses dados.
+				</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+	  <div class="features-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-left wow fadeInLeft" src="img/mutexcode.png" alt="">
+              <div class="wow fadeInRight">
+                <h2>Mutex</h2>
+                <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s" style="text-align: justify;">
+					Também chamado de exclusão mútua, é uma técnica usada em programação concorrente para evitar que dois processos ou threads tenham acesso simultaneamente a um recurso compartilhado.
+					Para a implementação é a utilizado um semáforo binário, isto é, que só pode assumir dois valores distintos, 0 e 1. O travamento por semáforo deve ser feito antes da utilização do recurso, e após o seu uso o recurso deve ser liberado. Enquanto o recurso estiver em uso, qualquer outro processo que o utilize deve esperar a liberação.
+					Esse gerenciamento de recursos é utilizado no problema do Produtor e Consumidor, para que enquanto o dispositivo que está alimentando o buffer com os arquivos o aplicativo que está tocando esses arquivos não faça uso dos mesmos, junto da implementação das threads de produtor e consumidor no arquivo player.c é feita a implementação dos seus respectivos mutexes <code>producer_mutex</code> e <code>consumer_mutex</code>. 
+
+				</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-right wow fadeInRight" src="img/threadpool.png" alt="">
+              <div class="wow fadeInLeft">
+                <h2>Pool de Threads</h2>
+                <p class="wow fadeInLeft" data-wow-delay="0.4s" data-wow-duration="0.5s" style="text-align: justify;">
+					Um pool de threads é uma grupo de threads disponíveis para a realização de tarefas. O uso desse recurso é feito para otimizar o uso de threads em um programa,  pois um programa com milhares de threads pode sofrer em desempenho. Por isso Pools geralmente provêem uma melhora na performance quando se executam um grande número de tarefas curtas e repetitivas.
+					Quando se usa um pool de threads não existe a preocupação com o ciclo de vida das threads, criação e destruição, pois é utilizado o princípio de manter um número de threads aguardando para que tarefas sejam atribuídas as elas. 
+					Esse recurso se torna muito útil, já que o CMUS utiliza um grande número de threads para fazer o controle e utilização das suas tarefas, como alimentação de buffer, consumo de buffer, implementação de mutex e jobs. Se essa implementação fosse feita sem um Pool de Threads o processamento poderia ficar lento dependendo da proporção de uso. A implementação da Pool de Threads no CMUS é feita pelo arquivo worker.c, ele gerencia a execução das tarefas em uma lista.
+					A comunicação entre os processos é feita através de Synchronous messages, como a função <code>cmus_get_next_track</code> que pode ser encontrada no arquivo cmus.c, quando é acionada ela procura a próxima música na lista de reprodução usando a thread principal do programa, chamada de <code>main_thread</code>. Também encontramos comunicação por Asynchronous messages, que são os retornos dos jobs utilizados para implementar o Pool de Threads.
+				</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	  
+    </section><!-- #advanced-features -->
+
+    <!--==========================
+      Código Aberto
+    ============================-->
+    <section id="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">Código Aberto</h3>
+            <p class="cta-text"> Código totalmente aberto que pode ser baixado! </p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://cmus.github.io/"><i class="fa fa-github"></i> GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+
+
+
+
+    <!--==========================
+      Exemplos de Interface
+    ============================-->
+    <section id="gallery">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">Exemplos de Interface</h3>
+          <span class="section-divider"></span>
+          <p class="section-description"></p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/gallery/gallery-1.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-1.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/gallery/gallery-2.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-2.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/gallery/gallery-3.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-3.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/gallery/gallery-4.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-4.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/gallery/gallery-5.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-5.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/gallery/gallery-6.jpg" class="gallery-popup">
+                <img src="img/gallery/gallery-6.jpg" alt="">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #gallery -->
+
+    <!--==========================
+    Autores
+    ============================-->
+    <section id="team" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-title">Autores</h3>
+          <span class="section-divider"></span>
+          <p class="section-description"></p>
+        </div>
+        <div class="row wow fadeInUp">
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+
+              <h4></h4>
+              <span></span>
+              <div class="social">
+                <a href=""><i class=""></i></a>
+                <a href=""><i class=""></i></a>
+                <a href=""><i class=""></i></a>
+                <a href=""><i class=""></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+
+              <h4>Caio Dias</h4>
+              <span>Engenharia de Computação</span>
+              <div class="social">
+                <a href=""><i class=""></i></a>
+                <a href="https://www.facebook.com/caio.dasilvadias"><i class="fa fa-facebook"></i></a>
+                <a href="https://github.com/caiosdias"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/caio-da-silva-dias-a19071123/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+
+              <h4>Victor Stein</h4>
+              <span>Engenharia de Computação</span>
+              <div class="social">
+                <a href=""><i class=""></i></a>
+                <a href="https://www.facebook.com/victor.stein.967"><i class="fa fa-facebook"></i></a>
+                <a href="https://github.com/vitorStein"><i class="fa fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/victor-stein-428a89140/"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+
+              <h4></h4>
+              <span></span>
+              <div class="social">
+                <a href=""><i class=""></i></a>
+                <a href=""><i class=""></i></a>
+                <a href=""><i class=""></i></a>
+                <a href=""><i class=""></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #team -->
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+             REA <strong>Repositório Educacional Aberto</strong> - <a href="http://deinfo.uepg.br/~alunoso/">Ir ao site</a>.
+          </div>
+          <div class="textoUEPG">
+             Engenharia de Computação - <strong>UEPG</strong>.
+          </div>
+          <div class="credits">
+            Sistemas Operacionais - Prof. Dierone Foltran
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
